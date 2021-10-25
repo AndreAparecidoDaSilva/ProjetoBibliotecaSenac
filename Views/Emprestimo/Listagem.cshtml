@@ -72,4 +72,12 @@
             <p>Nenhum registro encontrado</p>
         }
     </div>
+    <div class="container">
+        <ul class="pagination">
+            @for (int i = 1; i <= (int)ViewData["PaginasEmp"]; i++)
+            {
+                <li class="page-item"><a class="page-link" href="/Emprestimo/Listagem?p=@i">@i</a></li>
+            }
+        </ul>
+    </div>
 </div>
