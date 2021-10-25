@@ -59,7 +59,7 @@ namespace Biblioteca.Models
                 }
 
                 //ordenação padrão
-                return query.Skip(pular).Take(size).OrderBy(l => l.Titulo).ToList();
+                return query.OrderBy(l => l.Titulo).Skip(pular).Take(size).ToList();
             }
         }
 

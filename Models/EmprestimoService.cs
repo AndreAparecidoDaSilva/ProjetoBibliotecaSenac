@@ -66,7 +66,7 @@ namespace Biblioteca.Models
                     query = bc.Emprestimos;
                 }
 
-                List<Emprestimo> listaConsulta = query.Skip(pular).Take(size).OrderByDescending(e => e.DataDevolucao).ToList();
+                List<Emprestimo> listaConsulta = query.OrderByDescending(e => e.DataDevolucao).Skip(pular).Take(size).ToList();
 
                 for (int i = 0; i < listaConsulta.Count; i++)
                 {
